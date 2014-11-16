@@ -21,7 +21,7 @@ namespace HelenaGerber_Promo.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("name=HGStoreDb", throwIfV1Schema: false)
         {
         }
 

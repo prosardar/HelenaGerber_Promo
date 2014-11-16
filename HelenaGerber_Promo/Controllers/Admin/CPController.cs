@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace HelenaGerber_Promo.Controllers.Admin
 {
+    [Authorize(Roles = "Holder")] 
     public class CPController : Controller
     {
         // GET: Admin
