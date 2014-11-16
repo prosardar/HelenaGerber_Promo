@@ -39,7 +39,7 @@ namespace HelenaGerber_Promo.Models.HGStore
         public int Id { get; set; }
 
         [DisplayName("Название")]
-        public decimal Name { get; set; }
+        public string Name { get; set; }
 
         [DisplayName("Цена")]
         public decimal Price { get; set; }
@@ -72,15 +72,6 @@ namespace HelenaGerber_Promo.Models.HGStore
 
         [DisplayName("Дополнительный рисунок 2")]
         public string FileName3 { get; set; }
-
-        [NotMapped]
-        public HttpPostedFileBase Image1 { get; set; }
-
-        [NotMapped]
-        public HttpPostedFileBase Image2 { get; set; }
-
-        [NotMapped]
-        public HttpPostedFileBase Image3 { get; set; }
     }
 
     public class Category

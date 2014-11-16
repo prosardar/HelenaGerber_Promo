@@ -41,7 +41,6 @@ namespace HelenaGerber_Promo.Controllers.Admin
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name");
-            ViewBag.ImageStoreId = new SelectList(db.Images, "Id", "FileName1");
             return View();
         }
 
@@ -50,7 +49,8 @@ namespace HelenaGerber_Promo.Controllers.Admin
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Price,CategoryId,SKU,ImageStoreId")] Product product)
+        public ActionResult Create([Bind(Include = "Name,Price,CategoryId")] Product product,
+            [Bind(Include = "Image1,Image2,Image3")] IEnumerable<HttpPostedFileBase> files)
         {
             if (ModelState.IsValid)
             {

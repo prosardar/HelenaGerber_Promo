@@ -180,6 +180,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411161213217_InitialCreate.cs" />
+    <Compile Include="Migrations\201411161213217_InitialCreate.Designer.cs">
+      <DependentUpon>201411161213217_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411161229395_f1.cs" />
+    <Compile Include="Migrations\201411161229395_f1.Designer.cs">
+      <DependentUpon>201411161229395_f1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411161254030_f2.cs" />
+    <Compile Include="Migrations\201411161254030_f2.Designer.cs">
+      <DependentUpon>201411161254030_f2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411161256543_f3.cs" />
+    <Compile Include="Migrations\201411161256543_f3.Designer.cs">
+      <DependentUpon>201411161256543_f3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\HGStore\HGStoreDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -318,6 +335,20 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411161213217_InitialCreate.resx">
+      <DependentUpon>201411161213217_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411161229395_f1.resx">
+      <DependentUpon>201411161229395_f1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411161254030_f2.resx">
+      <DependentUpon>201411161254030_f2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411161256543_f3.resx">
+      <DependentUpon>201411161256543_f3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
