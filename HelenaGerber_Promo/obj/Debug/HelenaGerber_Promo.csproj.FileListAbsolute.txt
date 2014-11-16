@@ -52,3 +52,4 @@ E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\Microsoft.Owin.Secur
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.dll
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.pdb
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.csprojResolveAssemblyReference.cache

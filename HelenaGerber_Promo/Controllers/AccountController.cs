@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using HelenaGerber_Promo.Models;
@@ -73,7 +74,7 @@ namespace HelenaGerber_Promo.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: true);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -154,10 +155,14 @@ namespace HelenaGerber_Promo.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email};
+                user.SecondName = model.SecondName;
+                user.FirstName = model.FirstName;
+                user.MiddleName = model.MiddleName;
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await AddUserToRoleAsync(user, "User");
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
@@ -386,6 +391,14 @@ namespace HelenaGerber_Promo.Controllers
 
             ViewBag.ReturnUrl = returnUrl;
             return View(model);
+        }
+
+        private async Task AddUserToRoleAsync(ApplicationUser user, string role)
+        {
+            using (var db = new ApplicationDbContext()) {
+                var userManager= new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                var result = await userManager.AddToRoleAsync(user.Id, role);
+            }
         }
 
         //

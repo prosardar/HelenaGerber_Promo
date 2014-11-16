@@ -70,6 +70,18 @@ namespace HelenaGerber_Promo.Models
         public string Email { get; set; }
 
         [Required]
+        [Display(Name = "Фамилия")]
+        public string SecondName { get; set; }
+
+        [Required]
+        [Display(Name = "Имя")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Отвество")]
+        public string MiddleName { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
