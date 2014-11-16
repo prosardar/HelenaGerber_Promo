@@ -1,4 +1,5 @@
-﻿@model IEnumerable<HelenaGerber_Promo.Models.HGStore.Product>
+﻿@model PagedList.IPagedList<HelenaGerber_Promo.Models.HGStore.Product>
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Список товаров";
@@ -16,16 +17,16 @@
             Изображение
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model[0].Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category.Name)
+            @Html.DisplayNameFor(model => model[0].Category.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Price)
+            @Html.DisplayNameFor(model => model[0].Price)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SKU)
+            @Html.DisplayNameFor(model => model[0].SKU)
         </th>
         <th></th>
     </tr>
@@ -57,7 +58,8 @@
     }
 
 </table>
-
+Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 <div>
     @Html.ActionLink("Назад в панель управления", "Index", "CP")
 </div>

@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HelenaGerber_Promo.Models.HGStore;
+using PagedList;
 
 namespace HelenaGerber_Promo.Controllers.Admin
 {
@@ -20,19 +21,17 @@ namespace HelenaGerber_Promo.Controllers.Admin
         public ActionResult Index()
         {
             var products = db.Products.Include(p => p.Category).Include(p => p.ImageStore);
-            return View(products.ToList());
+            return View(products.OrderBy(p => p.Id).ToPagedList(1, 5));
         }
 
         // GET: Products/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
-            {
+            if (id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
-            if (product == null)
-            {
+            if (product == null) {
                 return HttpNotFound();
             }
             return View(product);
@@ -73,13 +72,11 @@ namespace HelenaGerber_Promo.Controllers.Admin
         // GET: Products/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
+            if (id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
-            if (product == null)
-            {
+            if (product == null) {
                 return HttpNotFound();
             }
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", product.CategoryId);
@@ -94,8 +91,7 @@ namespace HelenaGerber_Promo.Controllers.Admin
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,Price,CategoryId,SKU,ImageStoreId")] Product product)
         {
-            if (ModelState.IsValid)
-            {
+            if (ModelState.IsValid) {
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -108,13 +104,11 @@ namespace HelenaGerber_Promo.Controllers.Admin
         // GET: Products/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
-            {
+            if (id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
-            if (product == null)
-            {
+            if (product == null) {
                 return HttpNotFound();
             }
             return View(product);
@@ -133,8 +127,7 @@ namespace HelenaGerber_Promo.Controllers.Admin
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
-            {
+            if (disposing) {
                 db.Dispose();
             }
             base.Dispose(disposing);

@@ -53,3 +53,7 @@ E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\Microsoft.Owin.Secur
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.dll
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.pdb
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.csprojResolveAssemblyReference.cache
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.dll
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.Mvc.dll
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.xml
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.Mvc.xml
