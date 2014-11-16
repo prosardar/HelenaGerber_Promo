@@ -46,9 +46,13 @@ textarea { max-width: 280px; }
 .footer-wrapper {
     display: block;
     background-color: #404040;
-    margin: -100px auto 0;
+    margin: -90px auto 0;
     height: 100px;
     position: relative;
+}
+
+.mg-left-10 {
+    margin-left: 10px;
 }
 
 /* header */

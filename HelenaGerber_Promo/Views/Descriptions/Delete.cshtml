@@ -1,11 +1,11 @@
 ﻿@model HelenaGerber_Promo.Models.HGStore.Description
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Удаление";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>@ViewBag.Title</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -59,7 +59,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Назад к списку", "Index")
         </div>
     }
 </div>

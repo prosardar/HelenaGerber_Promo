@@ -155,7 +155,7 @@ namespace HelenaGerber_Promo.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email};
+                var user = new ApplicationUser { UserName = model.FirstName, Email = model.Email};
                 user.SecondName = model.SecondName;
                 user.FirstName = model.FirstName;
                 user.MiddleName = model.MiddleName;

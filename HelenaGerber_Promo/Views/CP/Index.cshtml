@@ -5,4 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
+<h2>Панель управления</h2>
+
+<div>
+    <ul class="media-list">
+        <li>@Html.ActionLink("Товары", "Index", "Products")</li>
+        <li>@Html.ActionLink("Типы", "Index", "ProductTypes")</li>
+        <li>@Html.ActionLink("Категории", "Index", "Categories")</li>
+        <li>@Html.ActionLink("Материалы", "Index", "Materials")</li>
+        <li>@Html.ActionLink("Модели", "Index", "Models")</li>
+        <li>@Html.ActionLink("Размеры", "Index", "ProductSizes")</li>
+        <li>@Html.ActionLink("Цвета", "Index", "ProductColors")</li>
+    </ul>
+</div>

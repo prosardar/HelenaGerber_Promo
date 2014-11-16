@@ -88,7 +88,7 @@ namespace HelenaGerber_Promo.Models.HGStore
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [DisplayName("Название")]
+        [DisplayName("Категория")]
         public string Name { get; set; }
     }
 
@@ -97,7 +97,7 @@ namespace HelenaGerber_Promo.Models.HGStore
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [DisplayName("Товар")]
+        [DisplayName("Идентификатор товара")]
         public int ProductId { get; set; }
 
         [DisplayName("Тип")]
@@ -133,7 +133,7 @@ namespace HelenaGerber_Promo.Models.HGStore
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [DisplayName("Название")]
+        [DisplayName("Тип")]
         public string Name { get; set; }
 
         [DisplayName("Описание")]
@@ -145,7 +145,7 @@ namespace HelenaGerber_Promo.Models.HGStore
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [DisplayName("Название")]
+        [DisplayName("Модель")]
         public string Name { get; set; }
 
         [DisplayName("Назначение")]
@@ -184,7 +184,7 @@ namespace HelenaGerber_Promo.Models.HGStore
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [DisplayName("Название")]
+        [DisplayName("Материал")]
         public string Name { get; set; }
 
         [DisplayName("Описание")]
@@ -211,7 +211,7 @@ namespace HelenaGerber_Promo.Models.HGStore
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [DisplayName("Название цвета")]
+        [DisplayName("Цвет")]
         public string Name { get; set; }
     }
 }

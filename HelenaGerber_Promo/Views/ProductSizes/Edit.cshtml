@@ -1,11 +1,11 @@
 ﻿@model HelenaGerber_Promo.Models.HGStore.ProductSize
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Редактирование";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>@ViewBag.Title</h2>
 
 
 @using (Html.BeginForm())
@@ -43,7 +43,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Назад к списку", "Index")
 </div>
 
 @section Scripts {

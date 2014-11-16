@@ -1,11 +1,11 @@
 ﻿@model HelenaGerber_Promo.Models.HGStore.Description
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Описание";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
     <h4>Description</h4>
@@ -55,5 +55,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Назад к списку", "Index")
 </p>
