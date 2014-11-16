@@ -10,6 +10,7 @@ using HelenaGerber_Promo.Models.HGStore;
 
 namespace HelenaGerber_Promo.Controllers.Admin
 {
+    [Authorize(Roles = "Holder")]
     public class CategoriesController : Controller
     {
         private HGStoreDbContext db = new HGStoreDbContext();
