@@ -12,12 +12,19 @@ namespace HelenaGerber_Promo.Utils
 
         public static string GenerateTempFileName(string contentType)
         {
+            // Удаляем "image/"
             contentType = contentType.Remove(0, 6);
             string filename = Path.GetTempFileName();
             filename = Path.GetFileNameWithoutExtension(filename);
             filename = Path.Combine(ImagesPath, filename);
             filename = string.Format("{0}.{1}", filename, contentType);
             return filename;
+        }
+
+
+        public static string GetDataImagePath()
+        {
+            return ImagesPath;
         }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HelenaGerber_Promo.Utils;
 
 namespace HelenaGerber_Promo.Controllers
 {
@@ -11,6 +13,13 @@ namespace HelenaGerber_Promo.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+
+        public ActionResult Image(string imagename)
+        {
+            string fullPath = Path.Combine(ImageUtils.GetDataImagePath(), imagename);
+            return File(fullPath, "image/png"); 
         }
 
         public ActionResult About()

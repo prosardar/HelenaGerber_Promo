@@ -18,6 +18,12 @@ namespace HelenaGerber_Promo
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                "Images",
+                "images/{imagename}",
+                new { controller = "Home", action = "Image" }
+            );
         }
     }
 }

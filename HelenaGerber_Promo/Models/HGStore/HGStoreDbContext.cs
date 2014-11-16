@@ -83,15 +83,15 @@ namespace HelenaGerber_Promo.Models.HGStore
 
             string filename = ImageUtils.GenerateTempFileName(files[0].ContentType);
             files[0].SaveAs(filename);
-            imageStore.FileName1 = filename;
+            imageStore.FileName1 = Path.GetFileName(filename);
 
             filename = ImageUtils.GenerateTempFileName(files[1].ContentType);
             files[1].SaveAs(filename);
-            imageStore.FileName2 = filename;
+            imageStore.FileName2 = Path.GetFileName(filename);
 
             filename = ImageUtils.GenerateTempFileName(files[2].ContentType);
             files[2].SaveAs(filename);
-            imageStore.FileName3 = filename;
+            imageStore.FileName3 = Path.GetFileName(filename);
 
             return imageStore;
         }
