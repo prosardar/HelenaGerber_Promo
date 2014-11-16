@@ -1,9 +1,13 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.IO;
 using System.Web;
+using HelenaGerber_Promo.Utils;
 
 namespace HelenaGerber_Promo.Models.HGStore
 {
@@ -72,6 +76,25 @@ namespace HelenaGerber_Promo.Models.HGStore
 
         [DisplayName("Дополнительный рисунок 2")]
         public string FileName3 { get; set; }
+
+        public static ImageStore Create(IList<HttpPostedFileBase> files)
+        {
+            var imageStore = new ImageStore();
+
+            string filename = ImageUtils.GenerateTempFileName(files[0].ContentType);
+            files[0].SaveAs(filename);
+            imageStore.FileName1 = filename;
+
+            filename = ImageUtils.GenerateTempFileName(files[1].ContentType);
+            files[1].SaveAs(filename);
+            imageStore.FileName2 = filename;
+
+            filename = ImageUtils.GenerateTempFileName(files[2].ContentType);
+            files[2].SaveAs(filename);
+            imageStore.FileName3 = filename;
+
+            return imageStore;
+        }
     }
 
     public class Category

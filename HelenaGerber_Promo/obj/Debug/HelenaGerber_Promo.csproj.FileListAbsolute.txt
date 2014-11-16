@@ -53,8 +53,3 @@ E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\Microsoft.Owin.Secur
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.dll
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.pdb
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.csprojResolveAssemblyReference.cache
-E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.Migrations.InitialCreate.resources
-E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.csproj.GenerateResource.Cache
-E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.Migrations.f1.resources
-E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.Migrations.f2.resources
-E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.Migrations.f3.resources

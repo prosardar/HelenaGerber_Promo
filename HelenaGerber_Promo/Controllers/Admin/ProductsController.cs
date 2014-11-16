@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -50,19 +51,24 @@ namespace HelenaGerber_Promo.Controllers.Admin
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Name,Price,CategoryId")] Product product,
-            [Bind(Include = "Image1,Image2,Image3")] IEnumerable<HttpPostedFileBase> files)
+            IList<HttpPostedFileBase> files)
         {
-            if (ModelState.IsValid)
-            {
-                db.Products.Add(product);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+            if (ModelState.IsValid == false) {
+                ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", product.CategoryId);
+                ViewBag.ImageStoreId = new SelectList(db.Images, "Id", "FileName1", product.ImageStoreId);
+                return View(product);
             }
+            var imageStore = ImageStore.Create(files);
+            db.Images.Add(imageStore);
+            db.SaveChanges();
 
-            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", product.CategoryId);
-            ViewBag.ImageStoreId = new SelectList(db.Images, "Id", "FileName1", product.ImageStoreId);
-            return View(product);
+            product.ImageStoreId = imageStore.Id;
+
+            db.Products.Add(product);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
+
 
         // GET: Products/Edit/5
         public ActionResult Edit(int? id)
