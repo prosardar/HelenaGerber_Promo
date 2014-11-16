@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿using HelenaGerber_Promo.Models.HGStore;
+using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(HelenaGerber_Promo.Startup))]
