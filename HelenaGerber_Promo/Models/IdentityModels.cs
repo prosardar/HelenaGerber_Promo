@@ -51,7 +51,7 @@ namespace HelenaGerber_Promo.Models
             roleManager.Create(role1);
             roleManager.Create(role2);
 
-            var admin = new ApplicationUser { Email = "prosardar@ya.ru", UserName = "prosardar@ya.ru" };
+            var admin = new ApplicationUser { Email = "prosardar@ya.ru", UserName = "Sardar" };
             string password = "LeR4ikCZ";
             var result = userManager.Create(admin, password);
 
