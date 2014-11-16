@@ -161,7 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Admin\AdminController.cs" />
+    <Compile Include="Controllers\Admin\CPController.cs" />
     <Compile Include="Controllers\Admin\CategoriesController.cs" />
     <Compile Include="Controllers\Admin\DescriptionsController.cs" />
     <Compile Include="Controllers\Admin\FabricsController.cs" />
@@ -301,10 +301,10 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\CP\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Files\BowTieImages\" />
+    <Folder Include="App_Data\Files\ProductImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace HelenaGerber_Promo.Controllers.Admin
 {
-    public class AdminController : Controller
+    public class CPController : Controller
     {
         // GET: Admin
         public ActionResult Index()
