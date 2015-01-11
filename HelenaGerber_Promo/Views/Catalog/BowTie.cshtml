@@ -1,0 +1,36 @@
+﻿@model HelenaGerber_Promo.Models.HGStore.Product
+
+@{
+    ViewBag.Title = "Бабочки";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Каталог</h2>
+<div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <li>
+                <a href="#">Самовяз</a>
+            </li>
+            <li>
+                <a href="#">Регулируемые</a>
+            </li>
+            <li>
+                <a href="#">Ещё какие-то</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <ul class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Index","Home")">Главная</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","Catalog")">Каталог</a>
+            </li>
+            <li>
+                <a href="@Url.Action("BowTies","Catalog")">Бабочки</a>
+            </li>
+        </ul>
+    </div>
+</div>

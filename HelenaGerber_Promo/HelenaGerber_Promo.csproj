@@ -186,15 +186,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201501091925035_InitialCreate.cs" />
-    <Compile Include="Migrations\201501091925035_InitialCreate.Designer.cs">
-      <DependentUpon>201501091925035_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501100958044_w1.cs" />
-    <Compile Include="Migrations\201501100958044_w1.Designer.cs">
-      <DependentUpon>201501100958044_w1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\HGStore\HGStoreDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -204,10 +195,6 @@
     <Compile Include="Utils\ImageUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Files\ProductImages\ImageDb.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\logo.png" />
@@ -329,7 +316,9 @@
     <Content Include="Views\Catalog\BowTie.cshtml" />
     <Content Include="Views\Catalog\BowTies.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\Files\ProductImages\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -339,14 +328,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201501091925035_InitialCreate.resx">
-      <DependentUpon>201501091925035_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501100958044_w1.resx">
-      <DependentUpon>201501100958044_w1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
