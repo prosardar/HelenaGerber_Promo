@@ -1,4 +1,5 @@
 ﻿@model PagedList.IPagedList<HelenaGerber_Promo.Models.HGStore.Product>
+@using HelenaGerber_Promo.Models.HGStore
 @using PagedList.Mvc;
 
 @{
@@ -31,7 +32,7 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model) {
+    @foreach (Product item in Model) {
         <tr>
             <td>
                 <img style="width:80px; height:60px;" src="@Url.Action("Image", "Home", new { imagename = @item.ImageStore.FileName1 })" />

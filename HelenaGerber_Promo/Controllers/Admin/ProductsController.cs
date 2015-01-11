@@ -16,12 +16,14 @@ namespace HelenaGerber_Promo.Controllers.Admin
     public class ProductsController : Controller
     {
         private HGStoreDbContext db = new HGStoreDbContext();
+        private const int pageSize = 5;
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var products = db.Products.Include(p => p.Category).Include(p => p.ImageStore);
-            return View(products.OrderBy(p => p.Id).ToPagedList(1, 5));
+            int pageNumber = (page ?? 1);
+            return View(products.OrderBy(p => p.Id).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Products/Details/5
@@ -49,7 +51,7 @@ namespace HelenaGerber_Promo.Controllers.Admin
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Price,CategoryId")] Product product,
+        public ActionResult Create([Bind(Include = "Name,Description,Price,CategoryId")] Product product,
             IList<HttpPostedFileBase> files)
         {
             if (ModelState.IsValid == false) {
@@ -89,7 +91,7 @@ namespace HelenaGerber_Promo.Controllers.Admin
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Price,CategoryId,SKU,ImageStoreId")] Product product)
+        public ActionResult Edit([Bind(Include = "Id,Name,Description,Price,CategoryId,SKU,ImageStoreId")] Product product)
         {
             if (ModelState.IsValid) {
                 db.Entry(product).State = EntityState.Modified;

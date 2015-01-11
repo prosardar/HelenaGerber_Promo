@@ -57,3 +57,7 @@ E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.dll
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.Mvc.dll
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.xml
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.Mvc.xml
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.Migrations.InitialCreate.resources
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.csproj.GenerateResource.Cache
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\obj\Debug\HelenaGerber_Promo.Migrations.w1.resources
+E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\App_Data\Files\ProductImages\ImageDb.xml

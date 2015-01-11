@@ -45,8 +45,11 @@ namespace HelenaGerber_Promo.Models.HGStore
         [DisplayName("Название")]
         public string Name { get; set; }
 
+        [DisplayName("Описание")]
+        public string Description { get; set; }
+
         [DisplayName("Цена")]
-        public decimal Price { get; set; }
+        public int Price { get; set; }
 
         [DisplayName("Категория")]
         public int CategoryId { get; set; }

@@ -8,7 +8,7 @@ namespace HelenaGerber_Promo.Utils
 {
     public static class ImageUtils
     {
-        private static readonly string ImagesPath = HttpContext.Current.Server.MapPath("~/App_Data/Files/ProductImages");
+        private static readonly string ImagesPath = HttpContext.Current.Server.MapPath("~/Bin/App_Data/Files/ProductImages");
 
         public static string GenerateTempFileName(string contentType)
         {

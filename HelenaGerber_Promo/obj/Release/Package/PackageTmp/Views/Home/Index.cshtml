@@ -1,46 +1,76 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model PagedList.IPagedList<HelenaGerber_Promo.Models.HGStore.Product>
+@using System.Linq.Expressions
+@using HelenaGerber_Promo.Models.HGStore
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Главная";
 }
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p><a href="http://asp.net" class="btn btn-lg btn-success">Learn more &raquo;</a></p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+@for (int i = 0; i < Model.Count; i += 3) {
+    <div class="row">
+        @{
+            Product p1 = Model[i];
+            <div class="col-md-4">
+                <div style="text-align: center;">
+                    <h2>@p1.Name</h2>
+                    <a href="@Url.Action("BowTie", "Catalog", new { p1.Name })">
+                        <img class="product-image" src="@Url.Action("Image", "Home", new { imagename = @p1.ImageStore.FileName1 })" />
+                    </a>
+                    <p>
+                        @p1.Description
+                    </p>
+                    <p class="text-danger">
+                        @Html.DisplayFor(p => p1.Price) руб.
+                    </p>
+                    <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p1.Name })">Посмотреть &raquo;</a></p>
+                </div>
+            </div>
+            if (i + 1 < Model.Count) {
+                Product p2 = Model[i + 1];
+                <div class="col-md-4">
+                    <div style="text-align: center;">
+                        <h2>@p2.Name</h2>
+                        <a href="@Url.Action("BowTie", "Catalog", new { p2.Name })">
+                            <img class="product-image" src="@Url.Action("Image", "Home", new { imagename = @p2.ImageStore.FileName1 })" />
+                        </a>
+                        <p>
+                            @p2.Description
+                        </p>
+                        <p class="text-danger">
+                            @Html.DisplayFor(p => p2.Price) руб.
+                        </p>
+                        <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p2.Name })">Посмотреть &raquo;</a></p>
+                    </div>
+                </div>
+            }
+            if (i + 2 < Model.Count) {
+                Product p3 = Model[i + 2];
+                <div class="col-md-4">
+                    <div style="text-align: center;">
+                        <h2>@p3.Name</h2>
+                        <a href="@Url.Action("BowTie", "Catalog", new { p3.Name })">
+                            <img class="product-image" src="@Url.Action("Image", "Home", new { imagename = @p3.ImageStore.FileName1 })" />
+                        </a>
+                        <p>
+                            @p3.Description
+                        </p>
+                        <p class="text-danger">
+                            @Html.DisplayFor(p => p3.Price) руб.
+                        </p>
+                        <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p3.Name })">Посмотреть &raquo;</a></p>
+                    </div>
+                </div>
+            }
+        }
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+}
+<div>
+    Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 </div>

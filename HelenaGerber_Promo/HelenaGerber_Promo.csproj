@@ -186,6 +186,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501091925035_InitialCreate.cs" />
+    <Compile Include="Migrations\201501091925035_InitialCreate.Designer.cs">
+      <DependentUpon>201501091925035_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501100958044_w1.cs" />
+    <Compile Include="Migrations\201501100958044_w1.Designer.cs">
+      <DependentUpon>201501100958044_w1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\HGStore\HGStoreDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -195,9 +204,9 @@
     <Compile Include="Utils\ImageUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\HGStoreDb.mdf" />
-    <Content Include="App_Data\HGStoreDb_log.ldf">
-      <DependentUpon>HGStoreDb.mdf</DependentUpon>
+    <Content Include="App_Data\Files\ProductImages\ImageDb.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -223,12 +232,16 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -313,10 +326,10 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\CP\Index.cshtml" />
     <Content Include="Views\Catalog\Index.cshtml" />
+    <Content Include="Views\Catalog\BowTie.cshtml" />
+    <Content Include="Views\Catalog\BowTies.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\Files\ProductImages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -326,6 +339,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201501091925035_InitialCreate.resx">
+      <DependentUpon>201501091925035_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501100958044_w1.resx">
+      <DependentUpon>201501100958044_w1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
