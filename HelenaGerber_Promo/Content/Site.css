@@ -624,9 +624,9 @@ tr.pager td {
         padding-left: 20px;
     }
 
-    .nav-sidebar > li > a:hover {
-        background: #e2e2e2;
-    }
+        .nav-sidebar > li > a:hover {
+            background: #e2e2e2;
+        }
 
     .nav-sidebar > .active > a {
         color: #fff;
@@ -650,4 +650,94 @@ tr.pager td {
 
 .main .page-header {
     margin-top: 0;
+}
+
+/* Product main details */
+
+
+.product-main select {
+    margin-top: 5px;
+    max-width: 100px;
+}
+
+/* Product slider (Flexslider) */
+
+.product-slider .flexslider {
+    margin-bottom: 10px;
+}
+
+    .product-slider .flexslider img {
+        max-height: 270px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+/* Flex slider for image */
+
+.product-image-slider {
+    
+}
+
+.flexslider ul {
+    padding: 0;
+    margin: 0;
+}
+
+    .flexslider ul li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+.flex-main .flexslider {
+    margin: 20px 0;
+    margin-bottom: 10px;
+    padding: 1px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 2px #888;
+    border-radius: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+}
+
+    .flex-main .flexslider .slides > li {
+        position: relative;
+    }
+
+.flex-main .flex-caption {
+    width: 60%;
+    margin: 0 0 80px 50px;
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+    .flex-main .flex-caption h3 {
+        color: #fff;
+        font-size: 26px;
+        margin: 0;
+        font-weight: normal;
+        line-height: 45px;
+    }
+
+        .flex-main .flex-caption h3 span {
+            padding-bottom: 3px;
+        }
+
+    .flex-main .flex-caption p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 22px;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+.flex-main .flexslider:hover .flex-next {
+    right: 15px;
+}
+
+.flex-main .flexslider:hover .flex-prev {
+    left: 15px;
 }

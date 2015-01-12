@@ -1,4 +1,5 @@
-﻿@model HelenaGerber_Promo.Models.HGStore.Product
+﻿@using HelenaGerber_Promo.Utils
+@model HelenaGerber_Promo.Models.HGStore.Product
 
 @{
     ViewBag.Title = "Бабочки";
@@ -32,5 +33,39 @@
                 <a href="@Url.Action("BowTies","Catalog")">Бабочки</a>
             </li>
         </ul>
+        <div class="product-main">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="product-slider">
+                        <div class="product-image-slider flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="~/images/@Model.ImageStore.FileName1" />
+                                </li>
+                                <li>
+                                    <img src="~/images/@Model.ImageStore.FileName2" />
+                                </li>
+                                <li>
+                                    <img src="~/images/@Model.ImageStore.FileName3" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/flexslider")
+    <script>
+        $('.product-image-slider').flexslider({
+            direction: "vertical",
+            controlNav: false,
+            directionNav: true,
+            pauseOnHover: true,
+            slideshowSpeed: 10000
+        });
+    </script>
+}
