@@ -6,9 +6,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Каталог</h2>
+
 <div class="row">
     <div class="col-sm-3 col-md-2 sidebar">
+        <h2>Каталог</h2>
         <ul class="nav nav-sidebar">
             <li>
                 <a href="#">Самовяз</a>
@@ -51,6 +52,16 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <!-- Title -->
+                    <h4 class="title">@Model.Name</h4>
+                    <h5>Цена : @Model.Price руб.</h5>
+                    <p>Shipping : Free</p>
+                    <p>Brand : Apple</p>
+                    <p>Категория : @Model.Category.Name</p>
+                    <p>Модель : sadf</p>
+                    <p>Availability : In Stock</p>
                 </div>
             </div>
         </div>

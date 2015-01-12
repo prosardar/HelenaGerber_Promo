@@ -57,4 +57,3 @@ E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.dll
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.Mvc.dll
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.xml
 E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\PagedList.Mvc.xml
-E:\Projects\Sites\HelenaGerber_Promo\HelenaGerber_Promo\bin\App_Data\Files\ProductImages\emptyFile.gif

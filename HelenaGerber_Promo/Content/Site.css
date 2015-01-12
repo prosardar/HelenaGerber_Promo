@@ -604,7 +604,7 @@ tr.pager td {
         left: 0;
         z-index: 1000;
         display: block;
-        padding: 20px;
+        /*padding: 20px;*/
         overflow-x: hidden;
         overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
         background-color: #eeeeee;
@@ -675,7 +675,6 @@ tr.pager td {
 /* Flex slider for image */
 
 .product-image-slider {
-    
 }
 
 .flexslider ul {
@@ -741,3 +740,15 @@ tr.pager td {
 .flex-main .flexslider:hover .flex-prev {
     left: 15px;
 }
+
+/* Title */
+
+.title {
+    margin-bottom: 8px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+    .title i {
+        margin-right: 3px;
+    }

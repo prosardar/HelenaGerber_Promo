@@ -195,11 +195,8 @@
     <Compile Include="Utils\ImageUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Files\ProductImages\emptyFile.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\HGStore.mdf" />
-    <Content Include="App_Data\HGStore_log.ldf">
+    <Content Include="App_Data\Files\HGStore.mdf" />
+    <Content Include="App_Data\Files\HGStore_log.ldf">
       <DependentUpon>HGStore.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
@@ -326,7 +323,9 @@
     <Content Include="Views\Catalog\BowTie.cshtml" />
     <Content Include="Views\Catalog\BowTies.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\Files\ProductImages\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
