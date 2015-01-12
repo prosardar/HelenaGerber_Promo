@@ -429,7 +429,7 @@ tr.pager td {
 *   Mobile Styles   *
 ********************/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     /* header
     ----------------------------------------------------------*/
     header .float-left,
@@ -598,7 +598,7 @@ tr.pager td {
     display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .sidebar {
         /*top: 51px;*/
         bottom: 0;
@@ -642,7 +642,7 @@ tr.pager td {
     padding: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .main {
         padding-right: 40px;
         padding-left: 40px;

@@ -806,8 +806,8 @@ pre {
     }
 
 .row {
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
     .row:before,
@@ -2166,7 +2166,7 @@ textarea.input-lg {
         clear: both;
     }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .form-horizontal .control-label {
         /*text-align: right;*/
     }
