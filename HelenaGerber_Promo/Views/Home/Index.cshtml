@@ -16,58 +16,58 @@
 @for (int i = 0; i < Model.Count; i += 3) {
     <div class="row">
         @{
-            Product p1 = Model[i];
-            <div class="col-md-4">
-                <div style="text-align: center;">
-                    <h2>@p1.Name</h2>
-                    <a href="@Url.Action("BowTie", "Catalog", new { p1.Name })">
-                        <img class="product-image" src="@Url.Content(@ImageUtils.ImagesPath + @p1.ImageStore.FileName1)" />
-                    </a>
-                    <p>
-                        @p1.Description
-                    </p>
-                    <p class="text-danger">
-                        @Html.DisplayFor(p => p1.Price) руб.
-                    </p>
-                    <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p1.Name })">Купить &raquo;</a></p>
-                </div>
+    Product p1 = Model[i];
+    <div class="col-md-4">
+        <div style="text-align: center;">
+            <h2>@p1.Name</h2>
+            <a href="@Url.Action("BowTie", "Catalog", new { p1.Name })">
+                <img class="product-image" src="~/images/@p1.ImageStore.FileName1" />
+            </a>
+            <p>
+                @p1.Description
+            </p>
+            <p class="text-danger">
+                @Html.DisplayFor(p => p1.Price) руб.
+            </p>
+            <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p1.Name })">Купить &raquo;</a></p>
+        </div>
+    </div>
+    if (i + 1 < Model.Count) {
+        Product p2 = Model[i + 1];
+        <div class="col-md-4">
+            <div style="text-align: center;">
+                <h2>@p2.Name</h2>
+                <a href="@Url.Action("BowTie", "Catalog", new { p2.Name })">
+                    <img class="product-image" src="~/images/@p2.ImageStore.FileName1" />
+                </a>
+                <p>
+                    @p2.Description
+                </p>
+                <p class="text-danger">
+                    @Html.DisplayFor(p => p2.Price) руб.
+                </p>
+                <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p2.Name })">Купить &raquo;</a></p>
             </div>
-            if (i + 1 < Model.Count) {
-                Product p2 = Model[i + 1];
-                <div class="col-md-4">
-                    <div style="text-align: center;">
-                        <h2>@p2.Name</h2>
-                        <a href="@Url.Action("BowTie", "Catalog", new { p2.Name })">
-                            <img class="product-image" src="@Url.Content(@ImageUtils.ImagesPath + @p2.ImageStore.FileName1)" />
-                        </a>
-                        <p>
-                            @p2.Description
-                        </p>
-                        <p class="text-danger">
-                            @Html.DisplayFor(p => p2.Price) руб.
-                        </p>
-                        <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p2.Name })">Купить &raquo;</a></p>
-                    </div>
-                </div>
-            }
-            if (i + 2 < Model.Count) {
-                Product p3 = Model[i + 2];
-                <div class="col-md-4">
-                    <div style="text-align: center;">
-                        <h2>@p3.Name</h2>
-                        <a href="@Url.Action("BowTie", "Catalog", new { p3.Name })">
-                            <img class="product-image" src="@Url.Content(@ImageUtils.ImagesPath + @p3.ImageStore.FileName1)" />
-                        </a>
-                        <p>
-                            @p3.Description
-                        </p>
-                        <p class="text-danger">
-                            @Html.DisplayFor(p => p3.Price) руб.
-                        </p>
-                        <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p3.Name })">Купить &raquo;</a></p>
-                    </div>
-                </div>
-            }
+        </div>
+    }
+    if (i + 2 < Model.Count) {
+        Product p3 = Model[i + 2];
+        <div class="col-md-4">
+            <div style="text-align: center;">
+                <h2>@p3.Name</h2>
+                <a href="@Url.Action("BowTie", "Catalog", new { p3.Name })">
+                    <img class="product-image" src="~/images/@p3.ImageStore.FileName1" />
+                </a>
+                <p>
+                    @p3.Description
+                </p>
+                <p class="text-danger">
+                    @Html.DisplayFor(p => p3.Price) руб.
+                </p>
+                <p><a class="btn btn-primary" href="@Url.Action("BowTie", "Catalog", new { p3.Name })">Купить &raquo;</a></p>
+            </div>
+        </div>
+    }
         }
     </div>
 }

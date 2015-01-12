@@ -23,6 +23,15 @@ namespace HelenaGerber_Promo.Controllers
             return View(products.OrderBy(p => p.Id).ToPagedList(pageNumber, pageSize));
         }
 
+        public ActionResult Image(string imagename)
+        {
+            string fullPath = ImageUtils.Combine(imagename);
+            if (string.IsNullOrEmpty(fullPath)) {
+                throw new HttpException(404, "Not Found");
+            }
+            return File(fullPath, "image/jpeg");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -16,9 +16,12 @@ namespace HelenaGerber_Promo
         {
             Database.SetInitializer(new AppDbInitializer());
 
+            var routes = RouteTable.Routes;
+            routes.RouteExistingFiles = true;
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            RouteConfig.RegisterRoutes(routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
