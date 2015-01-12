@@ -2166,6 +2166,13 @@ textarea.input-lg {
         clear: both;
     }
 
+@media (max-width: 987px) {
+    .form-horizontal .form-group {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
+
 @media (max-width: 768px) {
     .form-horizontal .control-label {
         /*text-align: right;*/
